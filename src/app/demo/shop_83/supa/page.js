@@ -49,7 +49,7 @@ const ShopNodeMainPage_xx = () => {
                 src='/images/midterm/homepage/womens.png'
                 alt=''
               />
-              <Link href='/demo/shop_xx/supa/womens' className='content'>
+              <Link href='/demo/shop_83/supa/womens' className='content'>
                 <h1 className='title'>WOMENS</h1>
                 <span className='subtitle'>SHOP NOW</span>
               </Link>
