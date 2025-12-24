@@ -1,25 +1,25 @@
 'use client';
 import { useState,useEffect }  from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams} from 'next/navigation';
 
-import Wrapper from '@/assets/wrappers/midterm/Shop_xx';
-import Product_xx from '@/components/midterm/Product_xx';
+import Wrapper from '../../_wrapper/Shop_xx';
+import Product_xx from '../../_components/Product_xx';
+import { supabase } from '@/db/clientSupabase';
  
 const FetchProductsByCategory_xx = () => {
     const [shop_xx, setShop_xx] = useState([]);
     const parms = useParams();
     const category=parms.category;
-    console.log('category:',category);
+    //console.log('category:',category);
 
-    const fetchShopFromNode = async () => {
+    const fetchShopFromSupabase = async () => {
         try {
-        const response = await fetch(`http://localhost:3000/api/shop_83/${category}`
-
-        );
-        const data = await response.json();
-        console.log('shop_83 data',data);
+          let { data , error } = await supabase
+  .from('category2_83')
+  .select('*, shop_xx(*)').eq('cname',category);
+        console.log('data',data[0].shop2_xx);
         if(data.length !== 0){
-          setShop_xx(data);
+        setShop_xx(data[0].shop2_xx);
         }
         } catch (err) {
           console.log(err);
@@ -27,7 +27,7 @@ const FetchProductsByCategory_xx = () => {
       };
 
     useEffect(() => {
-        fetchShopFromNode();
+        fetchShopFromSupabase();
     }, [category]);
 
   return (

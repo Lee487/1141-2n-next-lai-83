@@ -70,11 +70,12 @@ const Navbar_83 = () => {
                     <li className="menu-item"><Link href="/exams/midterm/p1_xx">W2_BookList_83</Link></li>
                     <li className="menu-item"><Link href="/exams/midterm/p2_xx">W3_BlogStatic_83</Link></li>
                     <li className="menu-item"><Link href="/exams/midterm/p3_xx">W3_BlogLocalJson_83</Link></li>
-                    <li className="menu-item"><Link href="/exams/midterm/p4_xx">W4_BlogNode_83</Link></li>
+                    <li className="menu-item"><Link href="/node_83">W4_BlogNode_83</Link></li>
                     <li className="menu-item"><Link href="#">W5_BlogSupa_83</Link></li>
                     <li className="menu-item"><Link href="#">W6_BlogSupa_83</Link></li>
-                    <li className="menu-item"><Link href="#">W7_BlogLocalJson2_83</Link></li>
+                    <li className="menu-item"><Link href="/localjson2_83">W7_BlogLocalJson2_83</Link></li>
                      <li className="menu-item"><Link href="/demo/shop_xx/node">W11_ShopNode_83</Link></li>
+                      <li className="menu-item"><Link href="/demo/shop_xx/supa">W12_ShopSupa_83</Link></li>
                   </ul>
                 </div>
               </li>

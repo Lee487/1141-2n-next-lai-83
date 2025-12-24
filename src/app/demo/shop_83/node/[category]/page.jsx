@@ -13,7 +13,7 @@ const FetchProductsByCategory_xx = () => {
 
     const fetchShopFromNode = async () => {
         try {
-        const response = await fetch(`http://localhost:3000/api/shop_83/${category}`
+        const response = await fetch(`http://localhost:5001/api/shop_83/${category}`
 
         );
         const data = await response.json();
